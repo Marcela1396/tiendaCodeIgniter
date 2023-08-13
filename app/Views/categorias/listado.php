@@ -24,8 +24,10 @@
             <td><?php echo $i['nom_categoria'] ?></td>
             <td><?php echo $i['desc_categoria'] ?></td>
             <td>
-                <a type="button" class="btn btn-primary">Editar</a>
-                <a type="button" class="btn btn-danger">Eliminar</a>
+                <a type="button" class="btn btn-primary" 
+                href="<?php echo base_url()?>categorias/editar/<?php echo $i['id_categoria'] ?>">Editar</a>
+                <a type="button" class="btn btn-danger" 
+                href="<?php echo base_url()?>categorias/eliminar/<?php echo $i['id_categoria'] ?>">Eliminar</a>
             </td>
         </tr>
         <?php endforeach ?>

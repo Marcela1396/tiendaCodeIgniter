@@ -34,6 +34,12 @@ $routes->get('/', 'Inicio::index');
 $routes->get('/categorias', 'Categorias::index');
 $routes->get('/categorias/registrar', 'Categorias::form_registro');
 $routes->post('/categorias/registrar', 'Categorias::registrar');
+
+$routes->get('/categorias/editar/(:any)', 'Categorias::form_edicion/$1');
+$routes->post('/categorias/editar', 'Categorias::editar');
+
+$routes->get('/categorias/eliminar/(:any)', 'Categorias::eliminar/$1');
+
 // Rutas para Productos
 $routes->get('/productos', 'Productos::index');
 
